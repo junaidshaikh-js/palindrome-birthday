@@ -45,19 +45,19 @@ function palindromeForAllDateFormats(date) {
 function getNextDate(date) {
   let [year, month, day] = dateToArr(date);
 
-  const tomorrow = new Date(year, month, day);
+  const tomorrow = new Date(year, month - 1, day);
 
   tomorrow.setDate(tomorrow.getDate() + 1);
 
-  let nextDate = String(tomorrow.getDate());
-  let nextMonth = String(tomorrow.getMonth());
-  let nextYear = String(tomorrow.getFullYear());
+  let nextDate = tomorrow.getDate();
+  let nextMonth = tomorrow.getMonth() + 1;
+  let nextYear = tomorrow.getFullYear();
 
-  if (Number(nextDate) < 10) {
+  if (nextDate < 10) {
     nextDate = "0" + nextDate;
   }
 
-  if (Number(nextMonth) < 10) {
+  if (nextMonth < 10) {
     nextMonth = "0" + nextMonth;
   }
 
