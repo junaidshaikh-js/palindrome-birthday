@@ -80,12 +80,12 @@ function nextPalindromeDate(date) {
 }
 
 function flush(message) {
-  output.innerHTML = "";
+  output.setAttribute("class", "result");
+  output.innerHTML = '<div class="lds-ripple"><div></div><div></div></div>';
 
   setTimeout(() => {
     output.innerHTML = `${message}`;
-    output.setAttribute("class", "result");
-  }, 1000);
+  }, 2000);
 }
 
 function palindromeBirthdate(e) {
