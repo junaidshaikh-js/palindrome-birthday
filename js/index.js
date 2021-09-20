@@ -1,5 +1,6 @@
 const birthDateInput = document.querySelector("#birth-date");
 const form = document.querySelector("form");
+const output = document.querySelector(".output");
 
 function isPalindromeStr(str) {
   // reverser the string
@@ -79,17 +80,12 @@ function nextPalindromeDate(date) {
 }
 
 function flush(message) {
-  let para = document.createElement("p");
-
-  para.innerText = `${message}`;
-
-  para.setAttribute("class", "result");
-
-  form.after(para);
+  output.innerHTML = "";
 
   setTimeout(() => {
-    para.remove();
-  }, 3000);
+    output.innerHTML = `${message}`;
+    output.setAttribute("class", "result");
+  }, 1000);
 }
 
 function palindromeBirthdate(e) {
