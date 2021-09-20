@@ -104,7 +104,9 @@ function palindromeBirthdate(e) {
     let [year, month, day] = dateToArr(nextPalindrome);
 
     flush(
-      `The nearest palindrome date is ${day}-${month}-${year}, you missed by ${diff} days`
+      `The nearest palindrome date is ${day}-${month}-${year}, you missed by ${diff} ${
+        diff > 1 ? "days" : "day"
+      }`
     );
   }
 }
