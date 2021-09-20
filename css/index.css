@@ -17,8 +17,10 @@ body {
 }
 
 .outer-container {
-  width: 80vw;
-  max-width: 500px;
+  position: relative;
+  width: 90vw;
+  max-width: 600px;
+  min-height: 100vh;
   margin: 2rem auto;
   background-color: white;
   padding: 1rem;
@@ -81,5 +83,36 @@ form button {
   to {
     transform: scale(1);
   }
+}
+
+ul {
+  list-style: none;
+  margin: 0.6rem 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer-section-wrapper {
+  margin: 6rem auto auto auto;
+  width: 85vw;
+  max-width: 500px;
+}
+
+.footer-section {
+  text-align: center;
+}
+
+.footer-section h2 {
+  margin: 1rem 0;
+  padding: 0.6rem 0;
+}
+
+.footer-section .social-links {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0;
 }
 /*# sourceMappingURL=index.css.map */
